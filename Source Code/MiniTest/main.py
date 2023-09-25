@@ -158,8 +158,8 @@ def node_time_control(active_time, start_min, end_min, prec, k, sleep, victim_ip
             else:
                 for node in ip_list:
                     if act_dic[node][clk] == 1:
-                        # active_control_client(node, active_time, sleep, 0, False, False, victim_ip, clk, node_number, prec,
-                        #                     attack_start, duration, ip_list)
+                        active_control_client(node, active_time, sleep, 0, False, False, victim_ip, clk, node_number, prec,
+                                         attack_start, duration, ip_list)
                         # node.cmd('sudo ./benign_behavior.py --time {} --n 10 --sleep 0.1 &'.format(time_interval))
                         print(node, ' is active.')
                 print(clk)

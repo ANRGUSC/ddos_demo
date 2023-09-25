@@ -23,3 +23,8 @@ Once the client IoT node is operational, proceed to execute the corresponding co
 sudo ./main.py
 ~~~
 
+## Training neural network and generate performance results
+
+The LSTM/MM-WC model extends from our previous work, *Correlation Aware DDoS Detection In IoT Systems*, The codebase for model training is publicly available in the repository [here](https://github.com/ANRGUSC/correlation_aware_ddos_iot). A pre-print version of the original paper can be accessed [here](https://arxiv.org/abs/2302.07982) .
+
+The code necessary for training the LSTM/MM-WC model is located in the folder [source_code](Source Code/MiniTest/inference/source_code). For further details on model training, please consult the repository documentation.
