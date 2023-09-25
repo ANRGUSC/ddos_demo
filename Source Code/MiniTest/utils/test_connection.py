@@ -5,19 +5,14 @@ import socket
 
 def test_ip_connection(ip, port, timeout=5):
     try:
-        # 创建一个socket对象
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        # 设置超时时间
         sock.settimeout(timeout)
-        # 尝试连接IP和端口
         sock.connect((ip, port))
         print(f"Success: Connection to {ip}:{port} is successful")
         sock.close()
     except socket.error:
         print(f"Error: Connection to {ip}:{port} failed")
 
-
-# 要测试的IP和端口
 ip_list = [
         '192.168.1.160',
         '192.168.1.159',
