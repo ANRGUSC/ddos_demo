@@ -237,8 +237,8 @@ def get_ip_address():
 
 def final_data_processing(victim_ip, ip_list, k, ratio, active_time, duration, memo):
     port = 22
-    username = 'pi'
-    password = 'anrgrpi'
+    username = ''
+    password = ''
     remote_file_path = '/home/pi/Documents/MiniTest/dataFile/packet_volume/packet_volume_info_{}.csv'
     local_file_path = '/home/pi/Documents/MiniTest/dataFile/final_data/packet_volume_info_{}.csv'
     final_data = pd.DataFrame()
