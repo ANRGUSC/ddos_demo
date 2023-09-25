@@ -5,6 +5,7 @@ from datetime import datetime
 import time
 import socket
 import csv
+import argparse
 sys.path.append("./inference/source_code/nn_training/")
 sys.path.append("./inference/source_code/")
 
@@ -23,8 +24,8 @@ threshold_dic = {
 }
 
 
-def load_the_data(data_path, model_path, sleep_time):
-    node_number = get_node_number()
+def load_the_data(data_path, model_path, sleep_time, node_number):
+    # node_number = get_node_number()
     model, scaler, selected_nodes_for_correlation = load_model(model_path)
     # selected_nodes_for_correlation.append(140)
     print(selected_nodes_for_correlation)
@@ -131,4 +132,7 @@ def get_node_number():
 
 
 if __name__ == '__main__':
-    load_the_data("./dataFile/data_for_inference/data_for_inference.csv", "./model/", 5)
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--model", type=str, default='138')
+    args = parser.parse_args()
+    load_the_data("./dataFile/data_for_inference/data_for_inference.csv", "./model/", 5, args.model)

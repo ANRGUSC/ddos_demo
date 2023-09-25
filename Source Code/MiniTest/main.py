@@ -104,9 +104,9 @@ def ddos_experiment(packet_volume_interval, traffic_file_name, k, attack_ratio, 
 def node_time_control(active_time, start_min, end_min, prec, k, sleep, victim_ip, node_number, attack_start,
                       duration, ip_list):
     act_dic = dict()
-    folder_path = "./dataFile"  # 请替换为你的文件夹路径
-    all_files = os.listdir(folder_path)  # 获取文件夹下的所有文件名
-    file_path_list = []  # 创建一个空列表来存储.csv文件的文件名
+    folder_path = "./dataFile"
+    all_files = os.listdir(folder_path)
+    file_path_list = []
     for file in all_files:
         if file.endswith('.csv'):
             file_path_list.append('./dataFile/{}'.format(file))
