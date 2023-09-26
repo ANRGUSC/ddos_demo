@@ -8,7 +8,21 @@ Executing the code requires sudo access on both the Client Node and the Control 
 
 ~~~bash
 cd ./MiniTest
+sudo pip3 install -r requirements.txt
+~~~
+
+If you fail to install scapy or pcapy, please run the following command.
+
+~~~bash
 sudo ./install_lib.sh
+~~~
+
+It should be noticed that the Tensorflow and shap is required but is not included in the *requirements.txt*, and it is required to run the inference script on the Client nodes. The version information is shown below:
+
+~~~bash
+virtualenv==20.24.2
+shap==0.42.1
+tensorflow==2.13.0
 ~~~
 
 ## Real time traffic generation
