@@ -17,7 +17,7 @@ If you fail to install scapy or pcapy, please run the following command.
 sudo ./install_lib.sh
 ~~~
 
-It should be noted that the Tensorflow and shap are required but are not included in the *requirements.txt*, and it is required to run the inference script on the Client nodes. The version information is shown below:
+It should be noted that the Tensorflow and shap are required but are not included in the *requirements.txt*, and it is necessary to run the inference script on the Client nodes. The version information is shown below:
 
 ~~~bash
 virtualenv==20.24.2
